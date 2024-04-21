@@ -27,6 +27,14 @@ function break_create(){
     return break_ele
 }
 
+function add_create(tagname,attrname,attrval,attrname1,attrval1,attrname2,attrval2){
+    var add_ele = document.createElement(tagname)
+    add_ele.setAttribute(attrname,attrval)
+    add_ele.setAttribute(attrname1,attrval1)
+    add_ele.setAttribute(attrname2,attrval2)
+    return add_ele;
+}
+
 function btn_create(tagname,attrname,attrval,attrname1,attrval1,content){
 var btn_ele = document.createElement(tagname)
 btn_ele.setAttribute(attrname,attrval)
@@ -62,9 +70,9 @@ var input_psd = input_create("input","type","password","id","psd")
 var break_psd = break_create();
 var break_psd1 = break_create();
 
-// var label_add = document.getElement("teaxtarea","type","text","id","add","cols","30","row","10","Address : ")
+
 var label_add = label_create("label","for","add","Address : ")
-var input_add = input_create("input","type","text","id","add")
+var input_add = add_create("textarea","id","add","cols","30","rows","3")
 var break_add = break_create();
 var break_add1 = break_create();
 
