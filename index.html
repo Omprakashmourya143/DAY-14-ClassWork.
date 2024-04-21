@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAY-14-ClassWork.</title>
+</head>
+<body>
+    <script>
+    function label_create(tagname,attrname,attrval,content){
+    var label_ele = document.createElement(tagname)
+    label_ele.setAttribute(attrname,attrval)
+    label_ele.innerHTML = content
+    return label_ele
+ }
+
+ function input_create(tagname,attrname,attrval,attrname1,attrval1){
+var input_ele = document.createElement(tagname)
+input_ele.setAttribute(attrname,attrval)
+input_ele.setAttribute(attrname1,attrval1)
+return input_ele
+}
+
+function break_create(){
+    var break_ele = document.createElement("br")
+    return break_ele
+}
+
+function btn_create(tagname,attrname,attrval,attrname1,attrval1,content){
+var btn_ele = document.createElement(tagname)
+btn_ele.setAttribute(attrname,attrval)
+btn_ele.setAttribute(attrname1,attrval1)
+btn_ele.innerHTML = content
+return btn_ele
+}
+
+
+var label_fname = label_create("label","for","fname","Firstname : ")
+var input_fname = input_create("input","type","text","id","fname")
+var break_fname = break_create();
+var break_fname1 = break_create();
+
+
+var label_mname = label_create("label","for","mname","Middlename : ")
+var input_mname = input_create("input","type","text","id","mname")
+var break_mname = break_create();
+var break_mname1 = break_create();
+ 
+var label_lname = label_create("label","for","lname","Lastname : ")
+var input_lname = input_create("input","type","text","id","lname")
+var break_lname = break_create();
+var break_lname1 = break_create();
+
+var label_email = label_create("label","for","email","Email : ")
+var input_email = input_create("input","type","email","id","email")
+var break_email = break_create();
+var break_email1 = break_create();
+
+var label_psd = label_create("label","for","psd","Password : ")
+var input_psd = input_create("input","type","password","id","psd")
+var break_psd = break_create();
+var break_psd1 = break_create();
+
+// var label_add = document.getElement("teaxtarea","type","text","id","add","cols","30","row","10","Address : ")
+var label_add = label_create("label","for","add","Address : ")
+var input_add = input_create("input","type","text","id","add")
+var break_add = break_create();
+var break_add1 = break_create();
+
+var btn_label = btn_create("button","id","btn","onclick","foo()","Click Me")
+
+function foo(){
+console.log(document.getElementById("fname").value);
+console.log(document.getElementById("mname").value);
+console.log(document.getElementById("lname").value);
+console.log(document.getElementById("email").value);
+console.log(document.getElementById("psd").value);
+console.log(document.getElementById("add").value);
+
+
+}
+
+document.body.append(label_fname,input_fname,break_fname,break_fname1,
+    label_mname,input_mname,break_mname,break_mname1,
+    label_lname,input_lname,break_lname,break_lname1,
+    label_email,input_email,break_email,break_email1,
+    label_psd,input_psd,break_psd,break_psd1,
+    label_add,input_add,break_add,break_add1,
+    btn_label
+    )
+    </script>
+</body>
+</html>
